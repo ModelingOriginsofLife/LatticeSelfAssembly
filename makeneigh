@@ -1,0 +1,4 @@
+gcc -c -x c++ neigh.cu -O6 -m64 -DSDL -DLINUX -w 
+g++ -c fblib.cpp imgload.cpp inputs.cpp -O6 -m64 -DSDL -DLINUX -std=c++11 -w 
+
+g++ neigh.o fblib.o imgload.o inputs.o -o neigh -lSDL -lpng -lm -O6 -m64 -DSDL -DLINUX -std=c++11 -w

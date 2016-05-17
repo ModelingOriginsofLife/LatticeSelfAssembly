@@ -1,0 +1,4 @@
+nvcc -c neigh.cu -DSDL -DLINUX -O6 -m64 -w -DCUDA
+g++ -c fblib.cpp imgload.cpp inputs.cpp -DSDL -DLINUX -O6 -m64 -std=c++11 -w 
+
+g++ neigh.o fblib.o imgload.o inputs.o -o neigh -lGL -lSDL -lpng -lcudart -lcurand -O6 -m64 -DSDL -DLINUX -std=c++11 -w -DCUDA
